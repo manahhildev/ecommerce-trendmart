@@ -57,7 +57,7 @@ const Products = () => {
   return (
     <div className="text-center mb-10">
       <h2 className="text-4xl md:text-5xl font-bold mt-5">
-        Our Products ✨
+        Our Productss ✨
       </h2>
       <section className="py-12 px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {products.map((product,Index) => (
