@@ -23,32 +23,31 @@ const products = [
   {
     id: 4,
     name: "Casual Winter Collection",
-    price: 2100,
+    price: "Rs 2,100",
     image: "https://as2.ftcdn.net/jpg/03/26/74/07/1000_F_326740780_44qkZrFf7z5ylIrVmV4raOMIv3MwOsnJ.jpg",
   },
   {
-    id: 3,
+    id: 5,
     name: "BassPro Earbuds",
     price: "Rs 5,300",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqS-AAF25ndJhEejNegBkGle-lKi-QnqiknQ&s"
   },
   {
-    id: 3,
+    id: 6,
     name: "Glow Night Lamp",
     price: "Rs 7,800",
     image: "https://gift4u.pk/wp-content/uploads/2024/08/LED-Oval-Shaped-Crystal-Decorative-Light-Lamp-1.webp"
   },
   {
-    id: 3,
+    id: 7,
     name: "Velvet Bliss Cushion",
     price: "Rs 9,500",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ0_4wJaa0ix7cDHTWN1vlcryfPWwa59XyhQ&s"
   },
   {
-    id: 3,
+    id: 8,
     name: "Charmé Luxe",
     price: "Rs 4,900",
-    // image :"https://image.preview.ph/preview/resize/image/200/10/19/mens-fragrance-for-women-nmwebp".
     image: "https://arfragrances.pk/cdn/shop/articles/Fragrance_Best_Perfume_520x500_59b7ffad-7432-4edc-b2bb-5524bd0c6b3b.webp?v="
   }
 ];
@@ -56,26 +55,29 @@ const products = [
 const Products = () => {
   return (
     <div className="text-center mb-10">
-      <h2 className="text-4xl md:text-5xl font-bold mt-5">
-        Our Productss ✨
+      <h2 className="text-3xl md:text-4xl font-bold mt-5">
+        Our Products ✨
       </h2>
-      <section className="py-12 px-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {products.map((product,Index) => (
+      {/* Responsive Grid */}
+      <section className="py-12 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products.map((product) => (
           <div
             key={product.id}
             className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center"
           >
-            {/* Fixed size image */}
+            {/* Responsive Image */}
             <img
               src={product.image}
               alt={product.name}
-              className="w-[250px] h-[300px] object-cover rounded-md hover:scale-105 transition"
+              className="w-full h-60 sm:h-64 md:h-72 object-cover rounded-md hover:scale-105 transition"
             />
-            <h3 className="mt-2 font-semibold text-slate-900 text-center">
+            <h3 className="mt-3 font-semibold text-slate-900 text-center text-sm sm:text-base">
               {product.name}
             </h3>
-            <p className="mt-1 font-bold text-slate-900">{product.price}</p>
-            <button className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+            <p className="mt-1 font-bold text-slate-900 text-sm sm:text-base">
+              {product.price}
+            </p>
+            <button className="mt-3 px-3 sm:px-4 py-2 bg-blue-600 text-white text-sm sm:text-base rounded-lg shadow hover:bg-blue-700 transition">
               Add to Cart
             </button>
           </div>
