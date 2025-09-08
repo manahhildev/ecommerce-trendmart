@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="p-4 bg-gray-900 text-white flex justify-between items-center relative">
+      <nav className="fixed top-0 left-0 w-full p-4 bg-gray-900 text-white flex justify-between items-center z-50 shadow-md">
         {/* Left: Logo */}
         <div className="text-4xl font-extrabold italic tracking-wide bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 text-transparent bg-clip-text">
           Trend<span className="text-white">Mart</span>
@@ -95,8 +95,8 @@ export default function Layout() {
         )}
       </nav>
 
-      {/* Page content */}
-      <main className="p-6">
+      {/* Page content (padding-top to avoid overlap with fixed navbar) */}
+      <main className="pt-24 p-6">
         <Outlet />
       </main>
     </div>
